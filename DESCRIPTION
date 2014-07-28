@@ -1,0 +1,17 @@
+Package: GoogleAPI
+Title: R dynamic client library generator for Google APIs
+Description: An R package that generates a dynamic client library to be used with any Google API.
+Version: 0.99.0
+Date: 2014-07-28
+Author: Siddhartha Bagaria
+Maintainer: Siddhartha Bagaria <sidb@google.com>
+Authors@R: c(person("Siddhartha", "Bagaria", role = c("aut", "cre"),
+                    email = "sidb@google.com"))
+Depends: R (>= 3.1.0), methods
+Imports: base64enc, httr, httpuv, jsonlite
+Suggests: RUnit
+SystemRequirements: OpenSSL library
+License: Apache License (== 2.0)
+URL: https://developers.google.com/apis-explorer
+BugReports: https://github.com/siddharthab/googleAPI/issues
+Collate: zzz.R Authentication-classes.R Authentication-methods.R

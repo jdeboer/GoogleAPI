@@ -1,0 +1,35 @@
+useDynLib(GoogleAPI, loadPrivateKey, loadPKCS12, signRSA)
+
+importFrom("base64enc", base64encode)
+importFrom("httr", GET, POST)
+importFrom("httr", add_headers, build_url, content, config, oauth_app, oauth_endpoint, stop_for_status)
+importFrom("jsonlite", fromJSON, toJSON)
+
+importClassesFrom("httr", Token, Token2.0)
+
+## Authentication
+
+# R symbols
+export(
+    readClientSecrets,
+    newUserOAuthParams,
+    newServerOAuthParams,
+    newServerOAuthParamsP12,
+    setPrimaryAuth,
+    getPrimaryAuth
+)
+
+# S4 classes
+exportClasses(PublicAPIKey, UserOAuth, ServerOAuth, GCEOAuth)
+
+# S4 methods
+exportMethods(getOAuthToken)
+
+## API Schema
+
+# R symbols
+#export(schema)
+#export(service)
+
+# S4 classes
+#exportClasses(GoogleAPISchema)
